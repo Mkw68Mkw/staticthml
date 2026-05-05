@@ -364,6 +364,18 @@ p {
   border: 1px solid var(--line);
 }
 
+.avatar-image {
+  width: 96px;
+  height: 96px;
+  margin: 0 auto 0.65rem;
+  border-radius: 999px;
+  object-fit: cover;
+  object-position: center 28%;
+  display: block;
+  border: 1px solid var(--line);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.28);
+}
+
 .avatar-card h3 {
   margin: 0;
   font-size: 1rem;
