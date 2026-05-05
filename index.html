@@ -3,23 +3,256 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My First Website</title>
+    <title>Kevin Wu | IMS Student & Software Developer</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <main class="page">
-      <section class="card" aria-labelledby="title">
-        <h1 id="title">My First Website</h1>
-        <p>Built with HTML, CSS &amp; JS</p>
-        <button id="helloBtn" type="button">Click me</button>
+    <div class="bg-glow bg-glow-1" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow-2" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow-3" aria-hidden="true"></div>
+
+    <header class="site-header glass">
+      <div class="container nav-wrap">
+        <a class="brand" href="#home">Kevin Wu</a>
+        <button
+          id="menuToggle"
+          class="menu-toggle"
+          type="button"
+          aria-label="Toggle navigation"
+          aria-controls="siteNav"
+          aria-expanded="false"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <nav id="siteNav" class="nav-links" aria-label="Primary navigation">
+          <a href="#about">About</a>
+          <a href="#projects">Projects</a>
+          <a href="#skills">Skills</a>
+          <a href="#timeline">Timeline</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section id="home" class="hero">
+        <div class="container hero-grid">
+          <div class="hero-main reveal">
+            <p class="eyebrow">IMS Student &amp; Software Developer · Zürich, Switzerland</p>
+            <h1>
+              Kevin Wu
+              <span class="gradient-text">Building modern software with finance, data and design.</span>
+            </h1>
+            <p id="heroSubtitle" class="hero-subtitle">
+              IMS student from Zürich focused on web applications, backend systems and data-driven portfolio
+              optimization.
+            </p>
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="#projects">View Projects</a>
+              <a class="btn btn-secondary" href="#contact">Contact Me</a>
+            </div>
+            <div class="status-badges">
+              <span>IMS Student</span>
+              <span>Software Developer</span>
+              <span>Based in Zürich</span>
+              <span>Finance + Data</span>
+            </div>
+          </div>
+          <div class="hero-side reveal">
+            <article class="floating-card glass parallax-card" data-depth="0.09">
+              <h3>Python + FastAPI</h3>
+              <p>Backend APIs and practical system architecture.</p>
+            </article>
+            <article class="floating-card glass parallax-card" data-depth="0.13">
+              <h3>Portfolio Optimization</h3>
+              <p>Risk-aware allocation with data-driven decisions.</p>
+            </article>
+            <article class="floating-card glass parallax-card" data-depth="0.1">
+              <h3>GitHub Pages Live</h3>
+              <p>CI/CD basics and clean static deployment workflows.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="section reveal">
+        <div class="container">
+          <h2 class="section-title">About</h2>
+          <div class="about-grid">
+            <article class="about-card glass">
+              <p class="section-text">
+                I am Kevin Wu, an IMS student in Zürich with a strong interest in software engineering,
+                quantitative finance, and data-driven product development. I enjoy building practical applications
+                that solve real problems, from modern web interfaces to backend services and optimization tools.
+              </p>
+              <p class="section-text">
+                My focus areas include React and Next.js basics for frontend work, Python with FastAPI for backend
+                systems, and portfolio optimization concepts such as Modern Portfolio Theory.
+              </p>
+            </article>
+            <aside class="avatar-card glass" aria-label="Profile placeholder">
+              <div class="avatar-placeholder">KW</div>
+              <h3>Kevin Wu</h3>
+              <p>IMS Student · Software Developer</p>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" class="section reveal">
+        <div class="container">
+          <h2 class="section-title">Projects</h2>
+          <div class="projects-grid">
+            <article class="project-card glass">
+              <span class="project-icon" aria-hidden="true">📊</span>
+              <h3>Portfolio Optimization Tool</h3>
+              <p>
+                A data-driven web application helping private investors construct portfolios based on risk,
+                volatility, expected return, covariance matrices, and Modern Portfolio Theory.
+              </p>
+              <div class="tech-tags">
+                <span>Python</span>
+                <span>FastAPI</span>
+                <span>Supabase</span>
+                <span>JavaScript</span>
+                <span>Optimization</span>
+              </div>
+              <a class="project-link" href="#" aria-label="View Portfolio Optimization Tool">View Project</a>
+            </article>
+            <article class="project-card glass">
+              <span class="project-icon" aria-hidden="true">🧭</span>
+              <h3>System Visualization App</h3>
+              <p>
+                A visual tool for mapping IT system landscapes with components, zones, layouts, and service
+                status checks to improve technical transparency.
+              </p>
+              <div class="tech-tags">
+                <span>Flask</span>
+                <span>React</span>
+                <span>SQLite</span>
+                <span>React Flow</span>
+              </div>
+              <a class="project-link" href="#" aria-label="View System Visualization App">View Project</a>
+            </article>
+            <article class="project-card glass">
+              <span class="project-icon" aria-hidden="true">🚀</span>
+              <h3>Static Website Deployment</h3>
+              <p>
+                A GitHub Pages project demonstrating CI/CD fundamentals, clean static deployment workflows,
+                and lightweight performance-first frontend architecture.
+              </p>
+              <div class="tech-tags">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+                <span>GitHub Pages</span>
+              </div>
+              <a class="project-link" href="#" aria-label="View Static Website Deployment">View Project</a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="skills" class="section reveal">
+        <div class="container">
+          <h2 class="section-title">Skills</h2>
+          <div class="skills-grid">
+            <article class="skill-group glass">
+              <h3>⚡ Frontend</h3>
+              <div class="skills-tags">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+                <span>React Basics</span>
+                <span>Next.js Basics</span>
+              </div>
+            </article>
+            <article class="skill-group glass">
+              <h3>🧠 Backend</h3>
+              <div class="skills-tags">
+                <span>Python</span>
+                <span>FastAPI</span>
+                <span>PostgreSQL</span>
+                <span>Supabase</span>
+              </div>
+            </article>
+            <article class="skill-group glass">
+              <h3>📊 Data &amp; Finance</h3>
+              <div class="skills-tags">
+                <span>Data-driven Apps</span>
+                <span>Portfolio Optimization</span>
+                <span>Modern Portfolio Theory</span>
+              </div>
+            </article>
+            <article class="skill-group glass">
+              <h3>🛠 Tools</h3>
+              <div class="skills-tags">
+                <span>Git</span>
+                <span>GitHub</span>
+                <span>CI/CD Basics</span>
+                <span>Software Architecture</span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="timeline" class="section reveal">
+        <div class="container">
+          <h2 class="section-title">Timeline</h2>
+          <ol class="timeline">
+            <li class="timeline-item reveal">
+              <h3>IMS Student</h3>
+              <p>Building a strong foundation in computer science and software engineering.</p>
+            </li>
+            <li class="timeline-item reveal">
+              <h3>Web Development</h3>
+              <p>Creating responsive interfaces and modern user experiences for practical applications.</p>
+            </li>
+            <li class="timeline-item reveal">
+              <h3>Backend APIs</h3>
+              <p>Designing backend systems and APIs with Python and FastAPI.</p>
+            </li>
+            <li class="timeline-item reveal">
+              <h3>Portfolio Optimization / IDPA</h3>
+              <p>Applying quantitative finance concepts, including Modern Portfolio Theory.</p>
+            </li>
+            <li class="timeline-item reveal">
+              <h3>CI/CD Deployment</h3>
+              <p>Deploying static projects through GitHub Pages and learning automation workflows.</p>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <section id="contact" class="section contact reveal">
+        <div class="container">
+          <article class="contact-card glass">
+            <h2 class="section-title">Contact</h2>
+            <p>Interested in working together or viewing my projects?</p>
+            <div class="contact-actions">
+              <a class="btn btn-primary" href="https://github.com/your-username">GitHub</a>
+              <a class="btn btn-secondary" href="mailto:kevin@example.com">Email</a>
+              <a class="btn btn-secondary" href="https://www.linkedin.com/in/your-profile">LinkedIn</a>
+            </div>
+          </article>
+        </div>
       </section>
     </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>Built by Kevin Wu · Deployed with GitHub Pages</p>
+      </div>
+    </footer>
 
     <script src="script.js"></script>
   </body>
