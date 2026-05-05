@@ -1,0 +1,95 @@
+:root {
+  --bg-color: #f5f7fb;
+  --card-color: #ffffff;
+  --text-color: #1f2937;
+  --muted-color: #5b6474;
+  --accent-color: #4f46e5;
+  --accent-hover: #4338ca;
+  --shadow-color: rgba(17, 24, 39, 0.12);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  font-family: "Inter", system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  background: linear-gradient(180deg, #f8faff 0%, var(--bg-color) 100%);
+  color: var(--text-color);
+}
+
+.page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem;
+}
+
+.card {
+  width: min(100%, 520px);
+  text-align: center;
+  background: var(--card-color);
+  border-radius: 20px;
+  padding: 2.5rem 2rem;
+  box-shadow: 0 12px 30px var(--shadow-color);
+  animation: fadeInUp 650ms ease-out both;
+}
+
+h1 {
+  font-size: clamp(1.8rem, 5vw, 2.6rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.75rem;
+}
+
+p {
+  color: var(--muted-color);
+  font-size: clamp(1rem, 3vw, 1.125rem);
+  margin-bottom: 1.8rem;
+}
+
+button {
+  border: none;
+  border-radius: 12px;
+  background-color: var(--accent-color);
+  color: #ffffff;
+  padding: 0.8rem 1.4rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 180ms ease, background-color 180ms ease,
+    box-shadow 180ms ease;
+  box-shadow: 0 8px 18px rgba(79, 70, 229, 0.28);
+}
+
+button:hover {
+  background-color: var(--accent-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 22px rgba(67, 56, 202, 0.32);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    padding: 2rem 1.25rem;
+    border-radius: 16px;
+  }
+}
